@@ -1,0 +1,8 @@
+<app-shopping-edit></app-shopping-edit>
+<div class="row">
+    <a class="col-md-7 bg-light" *ngFor="let ing of ingredients; let i = index"  (click)="oneditItem(i)">
+            {{ing.name}} --> {{ing.amount}}
+    </a>
+</div>
+
+

@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-primary ms-2" (click)="onNewrecipie()">New recipie</button>
+    </div>
+</div>
+<div class="row container">
+    <div class="col-10 bg-light rounded">
+        <app-recipie-item *ngFor="let recipieitem of recipiearray; let i = index" [index]="i" [onerecipie]="recipieitem" ></app-recipie-item>
+    </div>
+</div>

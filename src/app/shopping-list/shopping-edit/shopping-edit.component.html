@@ -1,0 +1,18 @@
+
+<form [formGroup]="shoppingingaddform">
+    <div class="row my-2">
+        <div class="col-md-4 ms-2 form-group">
+            <label for="ingname">Ingredient name</label>
+            <input type="text" name="ingredient name" id="ingname" class="form-control" formControlName="ingname">
+        </div>
+        <div class="col-md-2 ms-2 form-group">
+            <label for="amnt">Amount</label>
+            <input type="number" name="amount" id="amnt" class="form-control" formControlName="amount">
+        </div>
+    </div>
+    <div class="ms-2 my-2">
+        <button class="btn btn-success ms-1" (click)="onadddata()" [disabled]="!shoppingingaddform.valid">{{editMode?'Edit':'Add'}}</button>
+        <button class="btn btn-danger ms-1" (click)="ondelete()" *ngIf="editMode">Delete</button>
+        <button class="btn btn-primary ms-1" (click)="onclear()">clear</button>
+    </div>
+</form>
