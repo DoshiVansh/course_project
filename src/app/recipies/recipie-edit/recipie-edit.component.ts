@@ -1,14 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { recipiesService } from '../recipies.service';
 import { recipies } from '../recipies.model';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-recipie-edit',
+  standalone: true,
   templateUrl: './recipie-edit.component.html',
-  styleUrl: './recipie-edit.component.css'
+  styleUrl: './recipie-edit.component.css',
+  imports:[ReactiveFormsModule,FormsModule,CommonModule]
 })
 export class RecipieEditComponent implements OnInit,OnDestroy{
 

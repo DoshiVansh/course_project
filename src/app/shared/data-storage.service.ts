@@ -5,7 +5,7 @@ import { recipies } from "../recipies/recipies.model";
 import { Observable,map,tap } from "rxjs";
 import { authService } from "../auth/auth.service";
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class DataStorageService{
     constructor(private http:HttpClient, private recipieserv:recipiesService,private authserv:authService){}
 

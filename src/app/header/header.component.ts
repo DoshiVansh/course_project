@@ -2,11 +2,16 @@ import { Component, OnDestroy, OnInit} from '@angular/core';
 import { DataStorageService } from '../shared/data-storage.service';
 import { authService } from '../auth/auth.service';
 import { Subscription } from 'rxjs';
+import { RouterModule } from '@angular/router';
+import { DropdownDirective } from '../shared/dropdown.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
+  standalone : true,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  imports: [RouterModule,DropdownDirective,CommonModule]
 })
 export class HeaderComponent implements OnInit,OnDestroy{
   

@@ -2,11 +2,18 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ingredient } from '../shared/ingredient.model';
 import { shoppinglistService } from './shopping-list.service';
 import { Subscription } from 'rxjs';
+import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-shopping-list',
+  standalone : true,
   templateUrl: './shopping-list.component.html',
-  styleUrl: './shopping-list.component.css'
+  styleUrl: './shopping-list.component.css',
+  imports:[ShoppingEditComponent,
+    ReactiveFormsModule,CommonModule]
 })
 export class ShoppingListComponent implements OnInit, OnDestroy{
   ingredients:ingredient[];

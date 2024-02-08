@@ -1,13 +1,16 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ingredient } from '../../shared/ingredient.model';
 import { shoppinglistService } from '../shopping-list.service';
-import { FormControl, FormGroup,Validators } from '@angular/forms';
+import { FormControl, FormGroup,FormsModule,ReactiveFormsModule,Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-shopping-edit',
+  standalone : true,
   templateUrl: './shopping-edit.component.html',
-  styleUrl: './shopping-edit.component.css'
+  styleUrl: './shopping-edit.component.css',
+  imports:[ReactiveFormsModule,CommonModule]
 })
 export class ShoppingEditComponent implements OnInit,OnDestroy{
   @ViewChild('ingredientname') elref_name:ElementRef;

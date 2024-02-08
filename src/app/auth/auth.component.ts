@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { authService } from './auth.service';
 import { Router } from '@angular/router';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-auth',
+  standalone: true,
   templateUrl: './auth.component.html',
-  styleUrl: './auth.component.css'
+  styleUrl: './auth.component.css',
+  imports:[
+    ReactiveFormsModule,
+    FormsModule,LoadingSpinnerComponent,HttpClientModule,CommonModule]
 })
 export class AuthComponent {
   loginmode:boolean = true;

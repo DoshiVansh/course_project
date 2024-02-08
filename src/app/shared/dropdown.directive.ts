@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appdropdown]'
+  selector: '[appdropdown]',
+  standalone:true
 })
 export class DropdownDirective {
   constructor(private elRef: ElementRef) {}

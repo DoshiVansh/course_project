@@ -3,11 +3,15 @@ import { recipies } from '../recipies.model';
 import { recipiesService } from '../recipies.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { DropdownDirective } from '../../shared/dropdown.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-recipie-detail',
+  standalone : true,
   templateUrl: './recipie-detail.component.html',
-  styleUrl: './recipie-detail.component.css'
+  styleUrl: './recipie-detail.component.css',
+  imports:[CommonModule]
 })
 export class RecipieDetailComponent implements OnInit,OnDestroy {
   particular_recipie_to_display:recipies;

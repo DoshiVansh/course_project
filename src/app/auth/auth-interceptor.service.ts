@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, exhaustMap, take } from "rxjs";
 import { authService } from "./auth.service";
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class AuthInterceptorService implements HttpInterceptor{
     constructor(private authserv:authService) {}
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

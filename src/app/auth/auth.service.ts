@@ -14,8 +14,6 @@ interface AuthResponseData{
     registered?: boolean
 }
 
-
-
 @Injectable({providedIn:'root'})
 export class authService{
     private tokenexpirationtimer:any;

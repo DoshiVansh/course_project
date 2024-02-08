@@ -3,8 +3,8 @@ import { recipies } from "./recipies.model";
 import { ingredient } from "../shared/ingredient.model";
 import { shoppinglistService } from "../shopping-list/shopping-list.service";
 import { Subject } from "rxjs";
-import { ActivatedRoute } from "@angular/router";
-@Injectable()
+
+@Injectable({providedIn:'root'})
 export class recipiesService{
 
   recipieschanged:Subject<recipies[]> = new Subject<recipies[]>()
