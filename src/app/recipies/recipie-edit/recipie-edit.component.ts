@@ -5,13 +5,14 @@ import { recipiesService } from '../recipies.service';
 import { recipies } from '../recipies.model';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { DropdownDirective } from '../../shared/dropdown.directive';
 
 @Component({
   selector: 'app-recipie-edit',
   standalone: true,
   templateUrl: './recipie-edit.component.html',
   styleUrl: './recipie-edit.component.css',
-  imports:[ReactiveFormsModule,FormsModule,CommonModule]
+  imports:[ReactiveFormsModule,FormsModule,CommonModule,DropdownDirective]
 })
 export class RecipieEditComponent implements OnInit,OnDestroy{
 

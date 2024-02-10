@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone : true,
   templateUrl: './recipie-detail.component.html',
   styleUrl: './recipie-detail.component.css',
-  imports:[CommonModule]
+  imports:[CommonModule,DropdownDirective]
 })
 export class RecipieDetailComponent implements OnInit,OnDestroy {
   particular_recipie_to_display:recipies;
