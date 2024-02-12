@@ -11,7 +11,7 @@ import { RecipiesResolverService } from './recipies/recipies-resolver.service';
 const routes: Routes = [
   {path:'', redirectTo:'/recipies', pathMatch:'full'},
   {path:'auth',component:AuthComponent},
-  {path:'shopping-list', loadComponent: () => import('./shopping-list/shopping-list.component').then((cmp)=> cmp.ShoppingListComponent)},
+  {path:'shoppingList', loadComponent: () => import('./shopping-list/shopping-list.component').then((cmp)=> cmp.ShoppingListComponent)},
   {path:'recipies',canActivate:[AuthGuard],loadComponent: () => import('./recipies/recipies.component').then((cmp)=> cmp.RecipiesComponent),children:[
     {path:'',component:RecipieDetailStartComponent},
     {path:'new',component:RecipieEditComponent},

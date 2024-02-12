@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './shopping-list.component.html',
   styleUrl: './shopping-list.component.css',
   imports:[ShoppingEditComponent,
-    ReactiveFormsModule,CommonModule]
+    ReactiveFormsModule,CommonModule,RouterModule]
 })
 export class ShoppingListComponent implements OnInit, OnDestroy{
   ingredients:ingredient[];
